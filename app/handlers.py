@@ -9,3 +9,7 @@ router = Router()
 @router.message(Command('start'))
 async def handle_go(message: Message):
     await message.answer(f'Привет, {message.from_user.first_name}', reply_markup=kb.menu_reply_markup)
+
+@router.message(Command('help'))
+async def handle_go(message: Message):
+    await message.answer('Помощь')
